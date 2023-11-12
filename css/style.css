@@ -1,0 +1,230 @@
+/* <!-- =================== FONT STYLE ==================  --> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* <!-- =================== CSS VARIABLES ==================  --> */
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yelloz-color:#ffc400;
+    --section-color:#e8f9ff;
+    --transition:0.5s ;
+}
+/* <!-- =================== COMMUN PROPRITIES ==================  --> */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#btnScrool{
+    background: var(--green-color);
+    padding: .4rem .6rem;
+    box-shadow: 0 1px 16px #adaaaa;
+    bottom: -100%;
+    transition: .3s;
+}
+.btn{
+    background-color: var(--red-color);
+    color: var(--yelloz-color);
+    font-weight:bolder ;
+    padding: 0.5rem 1rem;
+    text-transform:capitalize ;
+}
+.main-title i{
+    color: var(--yelloz-color);
+    font-size: 4rem;
+}
+.main-title::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* START NAV */
+.navbar{
+    background: var(--dark-color);
+}
+.navbar.nav-shadow{
+    box-shadow: 0 2px 20px #262525;
+}
+.navbar .nav-link{
+    color: var(--section-color);
+}
+.navbar .nav-link:hover{
+    color: var(--green-color);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--green-color);
+    background-color: transparent;
+}
+.navbar .search i{
+    color: var(--green-color);
+    border-left: solid 2px var(--green-color);
+}
+/* END NAV */
+/* START HOME */
+.home{
+    height: calc(100vh - 60.5px);
+    background-color: var(--dark-color);
+}
+/* END HOME */
+/* Start Section */
+.service .fuit{
+    height: 120px;
+}
+.service .fuit i{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.service .fuit .number{
+    font-size: 9rem;
+    color: var(--section-color);
+}
+.service .fuit .icon{
+    font-size: 3rem;
+    color: var(--green-color);
+}
+.service .row h2{
+    color: var(--yelloz-color);
+    text-transform: uppercase;
+}
+/* End Section */
+/* Star Our Work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work input[type="radio"] {
+    display: none;
+  }
+  
+  .our-work input[type="radio"]:checked ~ a{
+    background-color: var(--red-color);
+    color: var(--yelloz-color);
+  }
+  
+   label a{
+    display: block;
+    pointer-events: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    transition: var(--transition) ;
+    border-radius: 10px;
+  }
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    text-transform: capitalize;
+}
+.our-work .box::before{
+    content: attr(data);
+    background-color: #76f7ead1;
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    transform: translateY(calc(-100% - 5px));
+    transition: var(--transition);
+}
+.our-work .box:hover::before{
+    transform: translateX(0);
+}
+/* End Our Work */
+/* Start content */
+.content .para{
+    max-width: 550px;
+}
+/* End content */
+/* Start team  */
+.team{
+    background-color: var(--section-color);
+}
+.team h1{
+    color: var(--yelloz-color);
+}
+.team .card{
+    border: none;
+    text-transform: capitalize;
+}
+.team .card h5{
+    background-color: var(--green-color);
+    height: 40px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+/* Star project */
+.project {
+    background-color: var(--dark-color);
+}
+/* End project */
+/* Start subscribe */
+.subscribe {
+    background-color: var(--yelloz-color);
+  }
+  .subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .subscribe input[type="text"]:focus {
+    outline: none;
+  }
+  .subscribe ::placeholder {
+    color: white;
+  }
+  .subscribe input[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--yelloz-color);
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+  }
+/* End subscribe */
+/* Star footer */
+footer{
+    background-color: var(--dark-color);
+}
+footer #green{
+    color: var(--green-color);
+}
+footer #yellow{
+    color: var(--yelloz-color);
+}
+footer .media i{
+    margin-left: 0.75rem;
+}
+footer .media .facebook{
+    background-color: #1877f2;
+}
+footer .media .twitter{
+    background-color: #1da1f2;
+}
+footer .media .linkedin{
+    background-color: #0077b5;
+}
+footer .media .youtube{
+    background-color: #ff0000;
+}
+/* End footer */
+/* ===================== Breakpoint ==================== */
+/* --- xsmal an small and meduim device */
+@media screen and (width <= 991px) {
+    .list{
+        position: fixed;
+        top: -100%;
+        right: 0;
+        width: 100vw;
+        background-color: var(--dark-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 0;
+        transition: .3s;
+    }
+}                  
